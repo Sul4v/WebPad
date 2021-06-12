@@ -1,0 +1,67 @@
+
+#features {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.features-intro p{
+    font-family: 'Dosis', serif;
+    text-align: center;
+    font-size: 3rem;
+}
+
+/* .features-intro h1 {
+    font-size: 2.4rem;
+} */
+
+.features-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.features-card {
+    width: 300px;
+    height: 320px;
+    margin: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    border-radius: 0 20px 0 20px;
+    line-height: 1.4rem;
+    border: none;
+    background-color: rgb(63, 63, 63);
+    color: #fff;
+    box-shadow: 12px 12px 4px 0px rgba(0,0,0,0.43);
+    --webkit-box-shadow: 12px 12px 4px 0px rgba(0,0,0,0.43);
+    --moz-box-shadow: 12px 12px 4px 0px rgba(0,0,0,0.43);
+}
+
+.features-card i {
+    transition: 0.6s ease-in-out;
+    cursor: pointer;
+}
+
+.features-card:hover i {
+    transform: scale(1.2);
+
+}
+
+.features-card:hover .fa-file-alt {
+    color: blue;
+}
+
+.features-card:hover .fa-code {
+    color: red;
+}
+.features-card:hover .fa-markdown {
+    color: #000;
+}

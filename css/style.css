@@ -1,7 +1,8 @@
 /* Fonts */
 
 /* Font name: Cinzel */ @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
-/* Font name: Noto Sans JP*/ @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300:400:600:700:900&display=swap');
+/* Font name: Abel */ @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+/* Font name: Dosis */ @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
 
 /* Universal Selector */
 *{
@@ -12,6 +13,7 @@
 
 :root {
     --text-color: #023047;
+    --accent-color: #219EBC;
 }
 
 html {
@@ -20,6 +22,11 @@ html {
 
 ul{
     list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
 }
 
 
@@ -34,13 +41,11 @@ ul{
     width: 90%;
     height: 100%;
     margin: 0 auto;
-    border-bottom: 1px solid rgb(95, 95, 95);
 }
 
 /* NavBar */
 
 .nav-bar{
-    /* background: rgb(56, 55, 55); */
     height: 70px;
     padding: 0 10px;
     display: flex;
@@ -51,46 +56,55 @@ ul{
 }
 
 .left-side{
-    font-family: 'Cinzel', serif;
-    font-size: 1.5rem;
+    font-family: 'Abel', serif;
+    font-size: 2.5rem;
 }
+
+.left-side a{
+    transition: all 0.3s ease-in-out;
+}
+
+.left-side a:hover{
+    color: #795600;
+}
+
 
 .right-side{
     height: 100%;
     display: flex;
     align-items: center;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.3rem;
 }
 
 .right-side a{
     width: 100px;
-    height: 50px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.6s ease; 
+    transition: all 0.3s ease; 
     margin: 0 5px;
     text-decoration: none;
     color: var(--text-color);
-    font-weight: 600;
 }
 
 .right-side a:hover{
-    transform: translateY(10px);
+    transform: translateY(3px);
     cursor: pointer;
-    color: #219EBC;
-    border-bottom: 3px solid #219EBC;
+    color: var(--accent-color);
+    border-bottom: 3px solid var(--accent-color);
 }
 
 .right-side a:nth-last-child(2) {
-    border: 2px solid #219EBC;
+    border: 2px solid var(--accent-color);
     border-radius: 5px;
-    color: #219EBC;
+    color: var(--accent-color);
     transform: none;
 }
 
 .right-side a:last-child {
-    background-color:#219EBC;
+    background-color: var(--accent-color);
     border-radius: 5px;
     color: #fff;
     transform: none;
@@ -107,11 +121,11 @@ ul{
 }
 
 section{
-    min-height: 100vh;
+    min-height: 60vh;
 }
 
 #home {
-    width: 100%;
+    width: 100%;    
     height: calc(100vh - 71px);
     display: flex;
     justify-content: space-between;
@@ -129,156 +143,68 @@ section{
     min-width: 50%;
     max-width: 600px;
     transform: scaleX(-1); /* this is to flip the image horizontally */
-    /* z-index: -10; */
 }
 
-#features {
-    min-height: 100vh;
+.home-intro div{
     width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
+    margin-bottom: 5px;
+    font-family: 'Abel', sans-serif;
 }
 
-.features-intro {
-    font-family: 'Cinzel', serif;
-    text-align: center;
+.home-intro span{
+    font-size: 1.5rem;
 }
 
-.features-intro h1 {
-    font-weight: 700;
-    font-size: 2.4rem;
-}
-
-.features-main {
+#create-button{
+    background: #1ccfc9;
+    width: 100px;
+    height: 50px;
+    font-size: 2rem;
+    border-radius: 5px;
+    margin-right: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    transition: all 0.2s ease-in;
 }
 
-.features-card {
-    width: 300px;
-    height: 320px;
-    margin: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    padding: 5px;
-    border-radius: 0 20px 0 20px;
-    line-height: 1.4rem;
-    border: none;
-    background-color: rgb(63, 63, 63);
-    color: #fff;
-    box-shadow: 12px 12px 4px 0px rgba(0,0,0,0.43);
-    --webkit-box-shadow: 12px 12px 4px 0px rgba(0,0,0,0.43);
-    --moz-box-shadow: 12px 12px 4px 0px rgba(0,0,0,0.43);
-}
-
-.features-card i {
-    transition: 0.6s ease-in-out;
+#create-button:hover{
     cursor: pointer;
+    color: #fff;
+    background: #10948f;
 }
 
-.features-card:hover i {
-    transform: scale(1.2);
-
+.create-text{
+    font-size: 1em;
 }
 
-.features-card:hover .fa-file-alt {
-    color: blue;
-}
+/* Footer */
 
-.features-card:hover .fa-code {
-    color: red;
-}
-.features-card:hover .fa-markdown {
-    color: #000;
-}
-
-#team {
-    min-height: 100vh;
+footer{
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.team-intro {
-    text-align: center;
-}
-
-.team-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: var(--text-color);
-}
-
-.team-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    padding: 10px;
-}
-
-.team-card img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    border: 2px solid red;
-    transition: 0.6s ease-in-out;
-}
-
-.team-card div {
-    overflow: hidden;
-    border-radius: 50%;
-    transition: 0.6s ease-in-out;
-}
-
-.team-card div:hover img {
-    transform: scale(1.2);
-}
-
-.team-card p {
-    opacity: 0.6;
-    font-weight: 600;
-}
-
-.team-card ul {
+    height: 90px;
+    background: #D8D8D8;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.team-card ul li {
-    margin: 0 5px;
+footer div{
+    color: #444247;
+    font-family: 'Abel', sans-serif;
+    font-size: 3rem;
 }
 
-.team-card ul a {
-    text-decoration: none;
-    color: var(--text-color);
-}
 
-.team-card i {
-    transition: 0.5s ease-in-out;
+#footer-team{
+    transition: all 0.3s ease-in-out;
 }
-
-.team-card ul li:hover .fa-github {
-    color: #000;
+#footer-team:hover{
+    background: #10948f;
+    cursor: pointer;
+    color: #022b35;
+    border-radius: 5px;
 }
-
-.team-card ul li:hover .fa-linkedin-in {
-    color: #0077B5;
-}
-
-.team-card ul li:hover .fa-twitter {
-    color: #1DA1F2;
-}
-
