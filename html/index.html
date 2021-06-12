@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Webpad</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -20,9 +23,11 @@
                 </div>
 
                 <div class="right-side">
-                    <div>Item1</div>
-                    <div>Item2</div>
-                    <div>Item3</div>
+                    <a href="#features">Features</a>
+                    <a href="#team">Team</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#" class="signup-btn">SIGN UP</a>
+                    <a href="#" class="login-btn">LOGIN</a>
                 </div>
             </div>
 
@@ -30,19 +35,87 @@
 
             <div class="body">
 
-                <div class="home-options">
-                    <div class="home-option">Option 1</div>
-                    <div class="home-option">Option 2</div>
-                    <div class="home-option">Option 3</div>
-                </div>
-
-                <div class="home-image">
+                <section id="home">
+                    <div class="home-intro">
+                        <h1>WebPad</h1><br>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        </p>
+                    </div>
                     <img src="/images/home-image.svg" alt="The image is not available at the moment.">
-                </div>
+                </section>
+
+                <section id="features">
+                    <div class="features-intro">
+                        <h1>Features</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet.
+                        </p>
+                    </div>
+                    <div class="features-main">
+                        <div class="features-card">
+                            <i class="fas fa-file-alt fa-5x"></i>
+                            <div>
+                                <h1>Feature 1</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, vel.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="features-card">
+                            <i class="fas fa-code fa-5x"></i>
+                            <div>
+                                <h1>Feature 2</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, vel.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="features-card">
+                            <i class="fab fa-markdown fa-5x"></i>
+                            <div>
+                                <h1>Feature 3</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, vel.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="team">
+                    <div class="team-intro">
+                        <h1>Meet Our Amazing Team</h1>
+                        <p>None of us is as smart as all of us.</p>
+                    </div>
+                    <div class="team-main">
+                        <div class="team-card">
+                            <div>
+                                <img src="/images/avatar1.png" alt=""><br>
+                            </div><br>
+                            <h2>John Doe</h2>
+                            <p>Lead Developer</p><br>
+                            <ul>
+                                <li><a href="#"><i class="fab fa-github fa-2x"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in fa-2x"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter fa-2x"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="team-card">
+                            <div>
+                                <img src="/images/avatar2.png" alt=""><br>
+                            </div><br>
+                            <h2>James Diang</h2>
+                            <p>Lead Desginer</p><br>
+                            <ul>
+                                <li><a href="#"><i class="fab fa-github fa-2x"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in fa-2x"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter fa-2x"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
             </div>
-
-
-
         </div>
 
     </div>
