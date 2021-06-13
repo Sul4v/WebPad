@@ -1,0 +1,160 @@
+/* Font name: Sen */ @import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
+
+
+/* Menu Bar */
+
+.menu-bar{
+    width: 100%;
+    height: 40px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    /* background: yellowgreen; */
+    font-family: 'Sen', sans-serif;
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgb(192, 192, 192);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#back-button, #darkmode-button{
+    color: #000000;
+    transition: all 0.2s ease-in-out;
+}
+
+#back-button:hover, #darkmode-button:hover{
+    color: #018a8a;
+    cursor: pointer;
+}
+
+
+
+.mid-part{
+    display: flex;
+}
+
+.mid-options{
+    width: 25px;
+    height: 25px;
+
+    font-size: 1.3rem;
+    margin-right: 10px;
+    border-radius: 3px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mid-options:hover{
+    cursor: pointer;
+    background: rgb(216, 214, 214);
+    
+}
+
+.size-options{
+    width: 90px;
+    height: 25px;
+    margin-right: 20px;
+
+    font-size: 1.2rem;
+
+    border: 1px solid rgb(216, 214, 214);
+    border-radius: 4px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.size-minus, .size-plus{
+    width: 30px;
+    height: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.size-number{
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.size-minus:hover, .size-plus:hover{
+    cursor: pointer;
+    background: rgb(185, 184, 184);
+    border-radius: 4px;
+}
+
+.font-options{
+    width: 90px;
+    height: 25px;
+    margin-right: 10px;
+
+    border: 1px solid rgb(216, 214, 214);
+    border-radius: 4px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-family: 'Sen', sans-serif;
+}
+
+.font-options:hover{
+    cursor: pointer;
+    background-color: rgb(214, 214, 214);
+}
+
+.fa-chevron-down{ /* this is for the Font changer drop down */
+    margin-left: 7px;
+    font-size: 0.7rem;
+}
+
+#menuhide-button{
+    font-size: 1rem;
+}
+
+
+/* Writing Area */
+
+.whole-container{
+    width: 100%;
+    min-height: 150vh;
+    /* background-color: red; */
+}
+
+.main-section{
+    width: 100%;
+    min-height: 100vh;
+
+    padding-top: 20px;
+    background: rgb(247, 247, 247);
+}
+
+.writing-box{
+    width: 816px;
+    min-height: 1056px;
+    margin: 0 auto 50px auto;
+    background-color: #fff;
+    box-shadow: 1px 1px 6px 1px #919191;
+
+    border-radius: 5px;
+}
+
+/* .writing-area textarea{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.writing-area textarea:focus{
+    border: none;
+} */
