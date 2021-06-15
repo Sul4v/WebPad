@@ -1,6 +1,30 @@
 /* Font name: Sen */ @import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
 
 
+/* Variable colors */
+/* Themes */ 
+
+html{
+
+    --topbar-color: rgb(255, 255, 255);
+    --background-color: rgb(247, 247, 247);
+    --textarea-color: rgb(255, 255, 255);
+    --text-color: rgb(0, 0, 0);
+    --button-hover: rgb(185, 184, 184);
+    --border-color: rgb(216, 214, 214);
+}
+
+html[data-theme="dark"]{
+    
+    --topbar-color: rgb(65, 65, 65);
+    --background-color: #242424;
+    --textarea-color: #5a5a5a;
+    --text-color: #fff;
+    --button-hover: rgb(43, 43, 43);
+    --border-color: rgb(36, 36, 36);
+}
+
+
 /* Menu Bar */
 
 .menu-bar{
@@ -9,10 +33,10 @@
     margin: 0 auto;
     padding: 0 20px;
 
-    /* background: yellowgreen; */
+    background: var(--topbar-color);
     font-family: 'Sen', sans-serif;
     font-size: 1.2rem;
-    border-bottom: 1px solid rgb(192, 192, 192);
+    border-bottom: 1px solid var(--border-color);
 
     display: flex;
     justify-content: space-between;
@@ -41,6 +65,7 @@
     height: 25px;
 
     font-size: 1.3rem;
+    /* font-weight: none; */
     margin-right: 10px;
     border-radius: 3px;
 
@@ -51,7 +76,7 @@
 
 .mid-options:hover{
     cursor: pointer;
-    background: rgb(216, 214, 214);
+    background: var(--button-hover);
     
 }
 
@@ -62,7 +87,7 @@
 
     font-size: 1.2rem;
 
-    border: 1px solid rgb(216, 214, 214);
+    border: 1px solid var(--border-color);
     border-radius: 4px;
 
     display: flex;
@@ -93,7 +118,7 @@
 
 .size-minus:hover, .size-plus:hover{
     cursor: pointer;
-    background: rgb(185, 184, 184);
+    background: var(--button-hover);
     border-radius: 4px;
 }
 
@@ -102,7 +127,7 @@
     height: 25px;
     margin-right: 10px;
 
-    border: 1px solid rgb(216, 214, 214);
+    border: 1px solid var(--border-color);
     border-radius: 4px;
 
     display: flex;
@@ -114,7 +139,7 @@
 
 .font-options:hover{
     cursor: pointer;
-    background-color: rgb(214, 214, 214);
+    background-color: var(--button-hover);
 }
 
 .fa-chevron-down{ /* this is for the Font changer drop down */
@@ -126,29 +151,36 @@
     font-size: 1rem;
 }
 
+.switch{ /* This is for the dark mode button */
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
 
 /* Writing Area */
 
 .whole-container{
     width: 100%;
     min-height: 150vh;
-    /* background-color: red; */
+    background: var(--background-color);
 }
 
 .main-section{
     width: 100%;
     min-height: 100vh;
 
-    padding-top: 20px;
-    background: rgb(247, 247, 247);
+    padding: 20px 0;
+    background: var(--background-color);
 }
 
 .writing-box{
-    width: 816px;
-    min-height: 100vh;
-    margin: 0 auto 50px auto;
-    background-color: #fff;
-    box-shadow: 1px 1px 6px 1px #919191;
+    width: 8.5in;
+    height: 11in;
+    padding: 0.7in;
+    margin: 0 auto;
+    background-color: var(--textarea-color);
+    box-shadow: 1px 1px 6px 1px var(--border-color);
 
     border-radius: 5px;
 }
@@ -159,8 +191,11 @@
 }
 
 .writing-area textarea{
+    background-color: var(--textarea-color);
     width: 100%;
     height: 100vh;
+
+    font-size: 1rem;
     resize: none;
     padding: 10px;
     outline: none;

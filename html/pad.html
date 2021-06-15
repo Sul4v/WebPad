@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="light" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,7 +32,7 @@
                 <div class="size-options">
                     <div class="size-minus">-</div>
                     <div class="size-number">
-                        <select name="font-size" id="selection">
+                        <!-- <select name="font-size" id="selection">
                             <option value="12">12</option>
                             <option value="14">14</option>
                             <option value="16" selected="selected">16</option>
@@ -40,7 +40,7 @@
                             <option value="24">24</option>
                             <option value="28">28</option>
                             <option value="36">36</option>
-                        </select>
+                        </select> -->
                     </div>
                     <div class="size-plus">+</div>
                 </div>
@@ -59,7 +59,9 @@
             </div>
 
             <div class="right-part">
-                <i class="fas fa-moon" id="darkmode-button"></i>
+                <i class="fas fa-moon" id="darkmode-button">
+                    <input type="checkbox" name="theme" class="switch">
+                </i>
             </div>
             
         </div>
