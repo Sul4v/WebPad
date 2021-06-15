@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-
     <div class="whole-container">
         <div class="menu-bar">
             <div class="left-part">
@@ -22,21 +21,36 @@
             </div>
 
             <div class="mid-part">
-                <div class="mid-options"><i class="fas fa-align-left"></i></div>
-                <div class="mid-options"><i class="fas fa-align-right"></i></div>
-                <div class="mid-options"><b>B</b></div>
-                <div class="mid-options"><i>I</i></div>
-                <div class="mid-options"><u>U</u></div>
+                <div class="mid-options" id="left-align" title="align left"><i class="fas fa-align-left"></i></div>
+                <div class="mid-options" id="center-align" title="align center"><i class="fas fa-align-center"></i></div>
+                <div class="mid-options" id="right-align" title="align right"><i class="fas fa-align-right"></i></div>
+                <div class="mid-options" id="line-height-btn" title="line height"><i class="fas fa-grip-lines"></i></div>
+                <div class="mid-options" title="bold"><b>B</b></div>
+                <div class="mid-options" title="italic"><i>I</i></div>
+                <div class="mid-options" title="underline"><u>U</u></div>
 
                 <div class="size-options">
                     <div class="size-minus">-</div>
-                    <div class="size-number">13</div>
+                    <div class="size-number">
+                        <select name="font-size" id="selection">
+                            <option value="12">12</option>
+                            <option value="14">14</option>
+                            <option value="16" selected="selected">16</option>
+                            <option value="18">18</option>
+                            <option value="24">24</option>
+                            <option value="28">28</option>
+                            <option value="36">36</option>
+                        </select>
+                    </div>
                     <div class="size-plus">+</div>
                 </div>
 
                 <div class="font-options">
                     Sefoe<i class="fas fa-chevron-down"></i>
                 </div>
+
+                <div class="mid-options" title="underline"><i class="fas fa-search-minus"></i></div>
+                <div class="mid-options" title="underline"><i class="fas fa-search-plus"></i></div>
 
                 <div class="mid-options" id="menuhide-button">
                     <i class="fas fa-chevron-up"></i>
@@ -54,12 +68,13 @@
             <div class="writing-box">
                 <div class="writing-area">
                     <!-- I tried, but couldn't continue from here. Please refer to some tutorials and continue. -->
-                    <textarea name="" id="" cols="" rows=""></textarea> 
+                    <textarea name="" id="textarea" cols="" rows="" spellcheck="true"></textarea> 
                 </div>
             </div>
             
         </div>
 
     </div>
+    <script src="/javascript/script.js"></script>
 </body>
 </html>

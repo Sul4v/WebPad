@@ -81,10 +81,14 @@
 }
 
 .size-number{
-    width: 30px;
+    width: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.size-number select{
+    border: none;
 }
 
 .size-minus:hover, .size-plus:hover{
@@ -161,6 +165,7 @@
     padding: 10px;
     outline: none;
     border: none;
+    line-height: 1.2rem;
 }
 
 .writing-area textarea:focus{
