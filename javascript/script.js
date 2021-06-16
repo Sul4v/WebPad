@@ -7,18 +7,27 @@ var rightAlign = document.getElementById('right-align');
 
 var fontDown = document.querySelector(".size-minus");
 var fontUp = document.querySelector(".size-plus");
+var fontSizeDisplay = document.querySelector(".size-number") ;
+var fontNum = parseInt(fontSizeDisplay.innerText);
 
 var darkModeButton = document.querySelector("#darkmode-button");
 let checkbox = document.querySelector('input[name=theme]');
 
 
-// Font Size
-// var select = document.getElementById("selection");
-// select.addEventListener("change", function() {
-//     textArea.style.fontSize = `${this.value}px`;
-// });
+// Font Size 
+fontDown.addEventListener('click', () => {
+  minusFont = fontNum - 1; 
+  fontNum = minusFont;
+  textArea.style.fontSize = `${minusFont}px`;
+  fontSizeDisplay.textContent = minusFont
+})
 
-fontUp.addEventListener("click", () => console.log(textArea.style.fontSize));
+fontUp.addEventListener('click', () => {
+  addFont = fontNum + 1;
+  fontNum = addFont;
+  textArea.style.fontSize = `${addFont}px`;
+  fontSizeDisplay.textContent = addFont;
+})
 
 // Line Height
 lineHeight.addEventListener("click", () => {
@@ -80,3 +89,4 @@ function checkLocalStorage() {
 checkLocalStorage();
 
 //////////////////////////// Upto here dark mode ///////////////////////////
+
